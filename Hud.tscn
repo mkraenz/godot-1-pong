@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://mytheme.tres" type="Theme" id=1]
+[ext_resource path="res://Hud.gd" type="Script" id=2]
+[ext_resource path="res://ScoreLabel.gd" type="Script" id=3]
+[ext_resource path="res://PressStart2P-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+font_data = ExtResource( 4 )
+
+[node name="Hud" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="TitleLabel" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -180.0
+margin_top = -30.0
+margin_right = 180.0
+margin_bottom = 30.0
+grow_horizontal = 2
+theme = ExtResource( 1 )
+text = "PoPong"
+align = 1
+
+[node name="ScoreLabel" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -20.0
+margin_top = 240.0
+margin_right = 20.0
+margin_bottom = 300.0
+grow_horizontal = 2
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 0.627451 )
+align = 1
+script = ExtResource( 3 )
+
+[node name="HowtoLabel" type="Label" parent="."]
+margin_left = -26.0
+margin_top = 488.0
+margin_right = 512.0
+margin_bottom = 611.0
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 0.627451 )
+custom_fonts/font = SubResource( 1 )
+text = "Press
+Space"
+align = 1
+autowrap = true
